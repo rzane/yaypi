@@ -2,6 +2,16 @@
 
 ---
 
+# what is that?
+
+it's a specification for how to describe APIs with YAML
+
+---
+
+# [have you seen this before?](https://petstore.swagger.io/?_ga=2.225501658.1329879516.1549308291-350804693.1541977383)
+
+---
+
 ![left](./img/history.svg)
 
 # a brief history
@@ -82,3 +92,7 @@ paths:
 ![right](./img/generation.svg)
 
 # code generation
+
+---
+
+# [graphql should be mentioned](https://www.graphqlbin.com/v2/6RQ6TM)
