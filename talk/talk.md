@@ -83,7 +83,7 @@ paths:
 
 ![right](./img/documentation.svg)
 
-# documentation
+# [documentation](http://localhost:8080)
 
 ---
 
@@ -95,7 +95,7 @@ paths:
 
 ![right](./img/generation.svg)
 
-# code generation
+# [code generation](https://openapi-generator.tech/docs/generators.html)
 
 ---
 
