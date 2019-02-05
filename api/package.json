@@ -7,9 +7,11 @@
     "start": "bin/serve"
   },
   "dependencies": {
-    "fastify": "^1.13.4"
+    "fastify": "^1.13.4",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@types/uuid": "^3.4.4",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.1"
   }
