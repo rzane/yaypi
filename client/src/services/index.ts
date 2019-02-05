@@ -1,9 +1,11 @@
 import { ReviewApi, Configuration } from "./api";
 import { FakeApi } from "./fake";
 
+export * from "./api";
+
 /**
- * Assemble an API instance. Note that we're proxying
- * requests via create-react-app, hence the `/api`.
+ * Configure our API. We set the basePath to `/api`, because
+ * we're proxying requests with `create-react-app`.
  */
 
 const configuration = new Configuration({
@@ -13,7 +15,7 @@ const configuration = new Configuration({
 export const api = new ReviewApi(configuration);
 
 /**
- * Create a new Fake API for development
+ * Also, export a FakeAPI instance
  */
 
-export const fake = new FakeApi();
+export const fakeApi = new FakeApi();
