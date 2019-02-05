@@ -50,9 +50,9 @@ components:
     ReviewParams:
       type: object
       required:
-        - name
+        - productName
       properties:
-        name:
+        productName:
           type: string
           minLength: 3
 
@@ -60,11 +60,11 @@ components:
       type: object
       required:
         - id
-        - name
+        - productName
       properties:
         id:
           type: string
-        name:
+        productName:
           type: string
 
     ValidationError:
