@@ -48,7 +48,7 @@ class App extends Component<Props, State> {
     return (
       <div className="container">
         <h1 className="py-2 mt-2 mb-4 border-bottom">
-          Really, Good, Bad Reviews
+          Really Good, Bad Reviews
         </h1>
 
         <div className="row">

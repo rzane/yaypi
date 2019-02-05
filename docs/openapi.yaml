@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: Good Bad Reviews
-  description: Good Bad Reviews
+  title: Really Good, Bad Reviews
+  description: A review site for things that are good, but also bad.
   version: 0.0.0
 servers:
   - url: http://localhost:4000/api
