@@ -37,7 +37,7 @@ export class ReviewApi extends runtime.BaseAPI {
    */
   async createReviewRaw(
     requestParameters: CreateReviewRequest
-  ): Promise<runtime.ApiResponse<Array<Review>>> {
+  ): Promise<runtime.ApiResponse<Review>> {
     if (
       requestParameters.reviewParams === null ||
       requestParameters.reviewParams === undefined
@@ -63,16 +63,14 @@ export class ReviewApi extends runtime.BaseAPI {
     });
 
     return new runtime.JSONApiResponse(response, jsonValue =>
-      jsonValue.map(ReviewFromJSON)
+      ReviewFromJSON(jsonValue)
     );
   }
 
   /**
    * Create review
    */
-  async createReview(
-    requestParameters: CreateReviewRequest
-  ): Promise<Array<Review>> {
+  async createReview(requestParameters: CreateReviewRequest): Promise<Review> {
     const response = await this.createReviewRaw(requestParameters);
     return await response.value();
   }
