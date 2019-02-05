@@ -4,7 +4,7 @@ info:
   description: Good Bad Reviews
   version: 0.0.0
 servers:
-  - url: http://localhost:4000/
+  - url: http://localhost:4000/api
 paths:
   /reviews:
     get:

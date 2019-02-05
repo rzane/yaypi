@@ -7,12 +7,12 @@ const app = fastify({
   logger: { prettyPrint: true }
 });
 
-app.get("/reviews", async (_request, reply) => {
+app.get("/api/reviews", async (_request, reply) => {
   reply.send(storage.listReviews());
 });
 
 app.post(
-  "/reviews",
+  "/api/reviews",
   { schema: { body: reviewSchema } },
   async (request, reply) => {
     reply.send(storage.createReview(request.body));
