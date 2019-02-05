@@ -30,10 +30,10 @@ class App extends Component<Props, ReviewParams> {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="productName">Product name</label>
           <input
             type="text"
-            name="name"
+            name="productName"
             value={this.state.productName}
             onChange={this.handleChangeName}
             className="form-control"
