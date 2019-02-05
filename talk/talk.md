@@ -10,6 +10,8 @@
 - typically, with JSON/YAML
 - there are lots of tools
 
+^you might have used swagger a while ago, it's changed a bit since
+
 ---
 
 # [have you seen this before?](https://petstore.swagger.io/?_ga=2.225501658.1329879516.1549308291-350804693.1541977383)
@@ -24,6 +26,8 @@
 - became a member of the Linux Foundation in November 2015
 - renamed to OpenAPI in 2016
 - released version 3.0 in July 2017
+
+^major players have gotten involved, like Google, Microsoft, and IBM.
 
 ---
 
@@ -85,11 +89,15 @@ paths:
 
 # [documentation](http://localhost:8080)
 
+^talk about clients
+
 ---
 
 ![right](./img/contracts.svg)
 
 # contracts
+
+^talk about separate teams
 
 ---
 
@@ -97,6 +105,10 @@ paths:
 
 # [code generation](https://openapi-generator.tech/docs/generators.html)
 
+^type checking, fake implemenations, etc
+
 ---
 
 # [graphql should be mentioned](https://www.graphqlbin.com/v2/6RQ6TM)
+
+^it's self-documenting
