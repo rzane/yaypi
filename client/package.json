@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write 'src/**/*.{css,tsx,ts,js}'"
+    "format": "prettier --write 'src/**/*.{css,tsx,ts,js}'",
+    "typecheck": "tsc -p . --noEmit"
   },
   "eslintConfig": {
     "extends": "react-app"

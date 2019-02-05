@@ -11,7 +11,7 @@ interface State {
 
 class App extends Component<Props, State> {
   state: State = {
-    form: { name: "" }
+    form: { productName: "" }
   };
 
   handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -19,7 +19,7 @@ class App extends Component<Props, State> {
 
     event.preventDefault();
     this.props.onSubmit(form);
-    this.setState({ form: { name: "" } });
+    this.setState({ form: { productName: "" } });
   };
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +38,7 @@ class App extends Component<Props, State> {
           <input
             type="text"
             name="name"
-            value={this.state.form.name}
+            value={this.state.form.productName}
             onChange={this.handleChange}
             className="form-control"
           />

@@ -53,7 +53,7 @@ class App extends Component<Props, State> {
               <ul className="list-group list-group-flush">
                 {this.state.reviews.map(review => (
                   <li className="list-group-item" key={review.id}>
-                    {review.name}
+                    {review.productName}
                   </li>
                 ))}
               </ul>
