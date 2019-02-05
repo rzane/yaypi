@@ -51,21 +51,32 @@ components:
       type: object
       required:
         - productName
+        - rating
       properties:
         productName:
           type: string
           minLength: 3
+        rating:
+          type: number
+          minimum: 0
+          maximum: 5
 
     Review:
       type: object
       required:
         - id
         - productName
+        - rating
       properties:
         id:
           type: string
         productName:
           type: string
+          minLength: 3
+        rating:
+          type: number
+          minimum: 0
+          maximum: 5
 
     ValidationError:
       type: object
