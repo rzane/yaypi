@@ -45,16 +45,26 @@ class App extends Component<Props, State> {
 
   render() {
     return (
-      <div className="App">
-        <h1>Reviews</h1>
-        <ul>
-          {this.state.reviews.map(review => (
-            <li key={review.id}>{review.name}</li>
-          ))}
-        </ul>
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-lg-8">
+            <div className="card">
+              <div className="card-header h4">Reviews</div>
+              <ul className="list-group list-group-flush">
+                {this.state.reviews.map(review => (
+                  <li className="list-group-item" key={review.id}>
+                    {review.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-        <h1>New Review</h1>
-        <ReviewForm onSubmit={this.handleSubmit} />
+          <div className="col-lg-4">
+            <h2>New Review</h2>
+            <ReviewForm onSubmit={this.handleSubmit} />
+          </div>
+        </div>
       </div>
     );
   }

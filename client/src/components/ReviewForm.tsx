@@ -33,17 +33,20 @@ class App extends Component<Props, State> {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
             value={this.state.form.name}
             onChange={this.handleChange}
+            className="form-control"
           />
-        </label>
+        </div>
 
-        <button type="submit">Save Review</button>
+        <button className="btn btn-primary" type="submit">
+          Save Review
+        </button>
       </form>
     );
   }
