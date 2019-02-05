@@ -2,9 +2,13 @@
 
 ---
 
+![right](./img/question.svg)
+
 # what is that?
 
-it's a specification for how to describe APIs with YAML
+- it's a specification for how to describe APIs
+- typically, with JSON/YAML
+- there are lots of tools
 
 ---
 
