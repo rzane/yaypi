@@ -10,7 +10,7 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => (
         <li className="list-group-item" key={review.id}>
           <div className="d-flex justify-content-between align-items-center">
             <div className="h4 m-0">{review.productName}</div>
-            <ReactStars size={30} value={review.rating} />
+            <ReactStars edit={false} size={30} value={review.rating} />
           </div>
         </li>
       ))}

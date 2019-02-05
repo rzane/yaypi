@@ -30,7 +30,7 @@ export class Storage {
 
   public createReview(values: ReviewValues) {
     const review: Review = { id: generateId(), ...values };
-    this.reviews.push(review);
+    this.reviews = [...this.reviews, review];
     return review;
   }
 }

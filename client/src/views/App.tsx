@@ -36,7 +36,7 @@ class App extends Component<Props, State> {
     });
 
     this.setState(({ reviews }) => ({
-      reviews: reviews.concat(review)
+      reviews: [review].concat(reviews)
     }));
   }
 
@@ -46,7 +46,11 @@ class App extends Component<Props, State> {
 
   render() {
     return (
-      <div className="container py-5">
+      <div className="container">
+        <h1 className="py-2 mt-2 mb-4 border-bottom">
+          Really, Good, Bad Reviews
+        </h1>
+
         <div className="row">
           <div className="col-lg-8">
             <ReviewList reviews={this.state.reviews} />

@@ -15,7 +15,18 @@ const generateId = () => {
 };
 
 export class FakeApi extends BaseAPI implements ReviewApi {
-  private reviews: Review[] = [];
+  private reviews: Review[] = [
+    {
+      id: "1",
+      productName: "Maruchan Instant Lunch",
+      rating: 4.5
+    },
+    {
+      id: "2",
+      productName: "Taco Bell Quesarito",
+      rating: 4
+    }
+  ];
 
   createReviewRaw(
     requestParameters: CreateReviewRequest
@@ -29,7 +40,7 @@ export class FakeApi extends BaseAPI implements ReviewApi {
       ...reviewParams
     };
 
-    this.reviews = [...this.reviews, review];
+    this.reviews = [review, ...this.reviews];
     return review;
   }
 
