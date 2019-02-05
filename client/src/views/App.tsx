@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ReviewApi, Review, ReviewParams } from "../services";
+import ReviewList from "../components/ReviewList";
 import ReviewForm from "../components/ReviewForm";
 
 interface Props {
@@ -48,16 +49,7 @@ class App extends Component<Props, State> {
       <div className="container py-5">
         <div className="row">
           <div className="col-lg-8">
-            <div className="card">
-              <div className="card-header h4">Reviews</div>
-              <ul className="list-group list-group-flush">
-                {this.state.reviews.map(review => (
-                  <li className="list-group-item" key={review.id}>
-                    {review.productName}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ReviewList reviews={this.state.reviews} />
           </div>
 
           <div className="col-lg-4">

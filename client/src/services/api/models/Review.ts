@@ -30,12 +30,19 @@ export interface Review {
    * @memberof Review
    */
   productName: string;
+  /**
+   *
+   * @type {number}
+   * @memberof Review
+   */
+  rating: number;
 }
 
 export function ReviewFromJSON(json: any): Review {
   return {
     id: json["id"],
-    productName: json["productName"]
+    productName: json["productName"],
+    rating: json["rating"]
   };
 }
 
@@ -45,6 +52,7 @@ export function ReviewToJSON(value?: Review): any {
   }
   return {
     id: value.id,
-    productName: value.productName
+    productName: value.productName,
+    rating: value.rating
   };
 }

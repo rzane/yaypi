@@ -24,11 +24,18 @@ export interface ReviewParams {
    * @memberof ReviewParams
    */
   productName: string;
+  /**
+   *
+   * @type {number}
+   * @memberof ReviewParams
+   */
+  rating: number;
 }
 
 export function ReviewParamsFromJSON(json: any): ReviewParams {
   return {
-    productName: json["productName"]
+    productName: json["productName"],
+    rating: json["rating"]
   };
 }
 
@@ -37,6 +44,7 @@ export function ReviewParamsToJSON(value?: ReviewParams): any {
     return undefined;
   }
   return {
-    productName: value.productName
+    productName: value.productName,
+    rating: value.rating
   };
 }

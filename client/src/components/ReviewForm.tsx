@@ -1,33 +1,29 @@
 import React, { Component } from "react";
 import { ReviewParams } from "../services";
+import ReactStars from "react-stars";
 
 interface Props {
   onSubmit: (form: ReviewParams) => Promise<void>;
 }
 
-interface State {
-  form: ReviewParams;
-}
-
-class App extends Component<Props, State> {
-  state: State = {
-    form: { productName: "" }
+class App extends Component<Props, ReviewParams> {
+  state: ReviewParams = {
+    productName: "",
+    rating: 0
   };
 
   handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    const { form } = this.state;
-
     event.preventDefault();
-    this.props.onSubmit(form);
-    this.setState({ form: { productName: "" } });
+    this.props.onSubmit(this.state);
+    this.setState({ productName: "", rating: 0 });
   };
 
-  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
+  handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ productName: event.target.value });
+  };
 
-    this.setState(({ form }) => ({
-      form: { ...form, [name]: value }
-    }));
+  handleChangeStars = (rating: number) => {
+    this.setState({ rating });
   };
 
   render() {
@@ -38,9 +34,18 @@ class App extends Component<Props, State> {
           <input
             type="text"
             name="name"
-            value={this.state.form.productName}
-            onChange={this.handleChange}
+            value={this.state.productName}
+            onChange={this.handleChangeName}
             className="form-control"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="name">Rating</label>
+          <ReactStars
+            size={50}
+            value={this.state.rating}
+            onChange={this.handleChangeStars}
           />
         </div>
 
