@@ -1,5 +1,3 @@
-import * as uuid from "uuid/v4";
-
 export interface ReviewValues {
   name: string;
 }
@@ -18,6 +16,11 @@ export const reviewSchema = {
   }
 };
 
+const generateId = () =>
+  Math.random()
+    .toString(36)
+    .substring(2);
+
 export class Storage {
   private reviews: Review[] = [];
 
@@ -26,7 +29,7 @@ export class Storage {
   }
 
   public createReview(values: ReviewValues) {
-    const review: Review = { id: uuid(), ...values };
+    const review: Review = { id: generateId(), ...values };
     this.reviews.push(review);
     return review;
   }

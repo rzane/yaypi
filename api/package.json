@@ -7,8 +7,7 @@
     "start": "bin/serve"
   },
   "dependencies": {
-    "fastify": "^1.13.4",
-    "uuid": "^3.3.2"
+    "fastify": "^1.13.4"
   },
   "devDependencies": {
     "@types/uuid": "^3.4.4",
