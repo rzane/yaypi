@@ -1,5 +1,5 @@
 export interface ReviewValues {
-  name: string;
+  productName: string;
 }
 
 export interface Review extends ReviewValues {
@@ -9,7 +9,7 @@ export interface Review extends ReviewValues {
 export const reviewSchema = {
   type: "object",
   properties: {
-    name: {
+    productName: {
       type: "string",
       minLength: 3
     }
