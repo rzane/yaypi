@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+input="../docs/openapi.yaml"
+output="src/services/api"
+
+# Generate code
+node_modules/.bin/openapi-generator generate \
+  -g typescript-fetch \
+  -i "$input" \
+  -o "$output"
+
+# Remove unnecessary files
+rm -rf \
+  "$output/tsconfig.json" \
+  "$output/.openapi-generator" \
+  "$output/.openapi-generator-ignore"
+
+# Post-process with prettier
+node_modules/.bin/prettier --write "$output/**/*.{json,ts,js}"
