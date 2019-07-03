@@ -7,6 +7,6 @@
     "start": "redoc-cli serve openapi.yaml"
   },
   "dependencies": {
-    "redoc-cli": "^0.7.0"
+    "redoc-cli": "^0.8.4"
   }
 }
