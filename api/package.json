@@ -7,7 +7,7 @@
     "start": "node-dev bin/serve"
   },
   "dependencies": {
-    "fastify": "^1.13.4"
+    "fastify": "^2.15.1"
   },
   "devDependencies": {
     "@types/uuid": "^3.4.4",
